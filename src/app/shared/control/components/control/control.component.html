@@ -1,0 +1,6 @@
+<!--TODO: add ax-control--invalid and ax-control--disabled classes-->
+<div class="ax-control">
+    <label *ngIf="title as controlTitle" class="ax-control__label">{{controlTitle}}</label>
+
+    <ng-content></ng-content>
+</div>
