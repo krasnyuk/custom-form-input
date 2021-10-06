@@ -4,12 +4,20 @@
     &__label {
       display: block;
       font-weight: 500;
+      font-size: 14px;
       margin-bottom: 2px;
     }
 
     &.ax-control--invalid {
+      $invalid-color: red;
+
       input {
-        border-color: red;
+        border-color: $invalid-color;
+        color: $invalid-color;
+
+        &::placeholder {
+          color: $invalid-color;
+        }
       }
     }
 
@@ -42,13 +50,14 @@
 
       &::placeholder {
         color: $text-color;
+        transition: color 0.3s ease-in-out;
       }
 
       &:hover {
         background-color: #f8fafc;
       }
 
-      &:focus {
+      &:focus:not(.ng-invalid.ng-touched) {
         border-color: #004e90;
         box-shadow: 0px 0px 7px 0px rgba(0, 78, 144, 0.2);
       }

@@ -1,5 +1,16 @@
 <div class="layout-container">
+    <h2>Reactive control:</h2>
     <ax-control title="Title">
         <input [formControl]="textControl" placeholder="Placeholder">
+    </ax-control>
+
+    <h2>Disabled control:</h2>
+    <ax-control title="Title">
+        <input [formControl]="disabledControl" placeholder="Placeholder">
+    </ax-control>
+
+    <h2>Template-driven control:</h2>
+    <ax-control title="Title">
+        <input [(ngModel)]="text" placeholder="Placeholder">
     </ax-control>
 </div>
