@@ -8,8 +8,17 @@
       margin-bottom: 2px;
     }
 
+    &__error {
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
     &.ax-control--invalid {
       $invalid-color: red;
+
+      .ax-control__error {
+        color: $invalid-color;
+      }
 
       input {
         border-color: $invalid-color;

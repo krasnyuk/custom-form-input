@@ -8,9 +8,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 @NgModule({
     imports: [
         BrowserModule,
-        ControlModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        ControlModule,
     ],
     declarations: [
         AppComponent

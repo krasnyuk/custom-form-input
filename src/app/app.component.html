@@ -2,6 +2,8 @@
     <h2>Reactive control:</h2>
     <ax-control title="Title">
         <input [formControl]="textControl" placeholder="Placeholder">
+        <ng-template axValidation="required">Field is required</ng-template>
+        <ng-template axValidation="maxlength">Max length is 10 chars</ng-template>
     </ax-control>
 
     <h2>Disabled control:</h2>

@@ -1,7 +1,9 @@
 <div class="ax-control" [ngClass]="{'ax-control--invalid': shouldShowError, 'ax-control--disabled': control?.disabled}">
     <label *ngIf="title as controlTitle" class="ax-control__label">{{controlTitle}}</label>
-    <ng-content></ng-content>
-    <div *ngIf="shouldShowError">
-        Show errors
-    </div>
+    <ng-content select="input"></ng-content>
+    <ng-container *ngIf="shouldShowError">
+        <div *ngFor="let validationMessage of validationMessages" class="ax-control__error">
+            <ng-template [ngTemplateOutlet]="validationMessage.template"></ng-template>
+        </div>
+    </ng-container>
 </div>
